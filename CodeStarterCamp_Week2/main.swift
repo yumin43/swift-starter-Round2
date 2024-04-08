@@ -26,5 +26,6 @@ func findSameNumbers(myNumber: [Int]) {
 
 
 
+
 findSameNumbers(myNumber: myLottoNumbers)
 
