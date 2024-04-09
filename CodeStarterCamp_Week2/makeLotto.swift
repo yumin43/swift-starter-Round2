@@ -1,9 +1,9 @@
-func makeLottoNumberSet() -> Set<Int> {
-    var lotto: Set<Int> = Set<Int>()
+func makeLottoNumber() -> Set<Int> {
+    var lottoWinningNumbers: Set<Int> = Set<Int>()
 
-    while lotto.count < 6 {
-        lotto.insert(Int.random(in: 1...45))
+    while lottoWinningNumbers.count < 6 {
+        lottoWinningNumbers.insert(Int.random(in: 1...45))
     }
     
-    return lotto
+    return lottoWinningNumbers
 }

@@ -7,6 +7,6 @@ func printLottoResult(matchNumbers: Set<Int>) {
 }
 
 let myLottoNumbers = [1, 2, 3, 4, 5, 6]
-let lottoNumbers = makeLottoNumberSet()
+let lottoNumbers = makeLottoNumber()
 
 printLottoResult(matchNumbers: lottoNumbers.intersection(myLottoNumbers))
