@@ -1,12 +1,10 @@
-//
-//  main.swift
-//  CodeStarterCamp_Week2
-//
-//  Created by yagom.
-//  Copyright © yagom academy. All rights reserved.
-//
+let myLottoNumbers: [Int] = [1, 2, 3, 4, 5, 6]
+let lottoNumbers: Set<Int> = makeLotto()
 
-import Foundation
+let matchNumbers: Set<Int> = lottoNumbers.intersection(myLottoNumbers)
 
-print("Hello, World!")
-
+if matchNumbers.isEmpty {
+    print("아쉽지만 겹치는 번호가 없습니다.")
+} else {
+    print("축하합니다! 겹치는 번호는 \(matchNumbers.map{String($0)}.joined(separator: ", ")) 입니다!")
+}

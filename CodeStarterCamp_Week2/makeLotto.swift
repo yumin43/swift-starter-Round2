@@ -1,8 +1,9 @@
-//
-//  makeLotto.swift
-//  CodeStarterCamp_Week2
-//
-//  Created by 최승준 on 3/31/24.
-//
+func makeLotto() -> Set<Int> {
+    var lotto: Set<Int> = Set<Int>()
 
-import Foundation
+    while lotto.count < 6 {
+        lotto.insert(Int.random(in: 1...45))
+    }
+    
+    return lotto
+}
