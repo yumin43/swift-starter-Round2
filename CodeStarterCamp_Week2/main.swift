@@ -1,12 +1,19 @@
-func printLottoResult(matchNumbers: Set<Int>) {
-    if matchNumbers.isEmpty {
-        print("아쉽지만 겹치는 번호가 없습니다.")
+var roundNumbers: Dictionary<String, Set<Int>> = [String: Set<Int>]()
+
+func searchWinningNumber(round: Int) {
+    if let winningNumber = roundNumbers["\(round)회차"] {
+        print("\(round)회차의 로또 당첨 번호는 \(makeList(numbers: winningNumber)) 입니다.")
     } else {
-        print("축하합니다! 겹치는 번호는 \(matchNumbers.map{String($0)}.joined(separator: ", ")) 입니다!")
+        print("\(round)회차는 아직 추첨되지 않았습니다.")
     }
 }
 
-let myLottoNumbers = [1, 2, 3, 4, 5, 6]
-let lottoNumbers = makeLottoNumber()
+func makeList(numbers: Set<Int>) -> String {
+    return numbers.map{String($0)}.joined(separator: ", ")
+}
 
-printLottoResult(matchNumbers: lottoNumbers.intersection(myLottoNumbers))
+for _ in 0...4 {
+    makeLotto()
+}
+
+searchWinningNumber(round: 2)
