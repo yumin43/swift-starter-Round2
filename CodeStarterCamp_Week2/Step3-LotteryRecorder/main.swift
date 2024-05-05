@@ -47,7 +47,3 @@ func lottertyRecordMessenger(round: Int, lottoNumberRecords : [String : [Int] ] 
 let lotteryRecords = lotteryRecorder(rounds: 5)
 
 lottertyRecordMessenger(round : 1,  lottoNumberRecords: lotteryRecords)
-lottertyRecordMessenger(round : 2,  lottoNumberRecords: lotteryRecords)
-lottertyRecordMessenger(round : 3,  lottoNumberRecords: lotteryRecords)
-lottertyRecordMessenger(round : 4,  lottoNumberRecords: lotteryRecords)
-lottertyRecordMessenger(round : 5,  lottoNumberRecords: lotteryRecords)
