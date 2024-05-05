@@ -8,7 +8,7 @@
 import Foundation
 
 func convertToString(numbers: Array<Int>, separator: String = ", ") -> String {
-    return numbers.map { "\($0)" }.joined(separator: separator)
+    return numbers.map {String($0)}.joined(separator: separator)
 }
 
 func lotteryMachine() -> [Int] {
@@ -16,8 +16,8 @@ func lotteryMachine() -> [Int] {
     var winningNumber: Set<Int> = []
     
     while winningNumber.count < 6 {
-        winningNumber.insert(numbers.first!)
-        numbers.removeFirst()
+        let number = numbers.removeFirst()
+        winningNumber.insert(number)
     }
     return winningNumber.sorted()
 }
@@ -40,7 +40,7 @@ func lottertyRecordMessenger(round: Int, lottoNumberRecords : [String : [Int] ] 
         print("기록되지 않은 회차입니다.")
         return
     }
-
+    
     print("\(round)회차의 로또 당첨 번호는 " + convertToString(numbers: lotteryNumber) + " 입니다.")
 }
 
