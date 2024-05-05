@@ -12,8 +12,8 @@ func pickWinningNumber() -> [Int] {
     var winningNumber: Set<Int> = []
     
     while winningNumber.count < 6 {
-        winningNumber.insert(numbers.first!)
-        numbers.removeFirst()
+        let number = numbers.removeFirst()
+        winningNumber.insert(number)
     }
     return winningNumber.sorted()
 }
