@@ -17,4 +17,13 @@ func makeLottoNumbers() -> Set<Int> {
     return winningLottoSet
 }
 
-
+func checkLottoNumbers(winning: Set<Int>) {
+    let myLottoSet = Set(myLottoNumbers)
+    let matchingNumbers: Set<Int> = myLottoSet.intersection(winning)
+    if matchingNumbers.count > 0 {
+    let matchingString = matchingNumbers.map{ String($0) }.joined(separator: ", ")
+        print("축하합니다! 겹치는 번호는 \(matchingString) 입니다!")
+    } else {
+        print("아쉽지만 겹치는 번호가 없습니다.")
+    }
+}
