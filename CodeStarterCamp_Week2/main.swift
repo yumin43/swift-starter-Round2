@@ -8,5 +8,6 @@
 
 import Foundation
 
-print("Hello, World!")
+let winningLottoNumbers = makeLottoNumbers()
+checkLottoNumbers(winning: winningLottoNumbers)
 
