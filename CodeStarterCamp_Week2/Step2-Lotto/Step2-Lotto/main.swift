@@ -12,27 +12,15 @@ func pickWinningNumber() -> [Int] {
     var winningNumber: Set<Int> = []
     
     while winningNumber.count < 6 {
-        winningNumber.insert(numbers.first!)
-        numbers.removeFirst()
+        let number = numbers.removeFirst()
+        winningNumber.insert(number)
     }
     return winningNumber.sorted()
 }
 
-//func convertToString1(numbers: Array<Int>, separator: String = ", ") -> String {
-//    var str: String = ""
-//    for number in numbers {
-//        str += String(number)
-//        str += separator
-//    }
-//    str.removeLast(separator.count)
-//    return str
-//}
-
-
 func convertToString(numbers: Array<Int>, separator: String = ", ") -> String {
     return numbers.map { "\($0)" }.joined(separator: separator)
 }
-
 
 func matchLotto(myNumber: [Int], winningNumber: [Int]) {
     let myNumberSet: Set<Int> = Set(myNumber)
@@ -44,7 +32,6 @@ func matchLotto(myNumber: [Int], winningNumber: [Int]) {
         return
     }
     
-    let winningNumberSet = Set(winningNumber)
     let winningNumberString = convertToString(numbers: winningNumber)
     
     print("당첨번호는 " + winningNumberString + "입니다.")
