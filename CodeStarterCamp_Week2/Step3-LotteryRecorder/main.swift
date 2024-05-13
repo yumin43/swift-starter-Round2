@@ -11,7 +11,7 @@ func convertToString(numbers: Array<Int>, separator: String = ", ") -> String {
     return numbers.map {String($0)}.joined(separator: separator)
 }
 
-func lotteryMachine() -> [Int] {
+func lotteryPicker() -> [Int] {
     var numbers: Set<Int> = Set(1...45)
     var winningNumber: Set<Int> = []
     
@@ -22,20 +22,20 @@ func lotteryMachine() -> [Int] {
     return winningNumber.sorted()
 }
 
-func lotteryRecorder(rounds : Int) -> [String : [Int]] {
+func lotteryRecorder(rounds: Int) -> [String : [Int]] {
     guard rounds > 0 else {
         return [:]
     }
     
-    var lottoNumberOfRound : [String : [Int]] = [:]
+    var lottoNumberOfRounds: [String : [Int]] = [:]
     
     for round in 1...rounds {
-        lottoNumberOfRound["\(round)회차"] = lotteryMachine()
+        lottoNumberOfRounds["\(round)회차"] = lotteryPicker()
     }
-    return lottoNumberOfRound
+    return lottoNumberOfRounds
 }
 
-func lottertyRecordMessenger(round: Int, lottoNumberRecords : [String : [Int] ] ) {
+func lottertyRecordMessenger(round: Int, lottoNumberRecords: [String : [Int]]) {
     guard let lotteryNumber = lottoNumberRecords["\(round)회차"] else {
         print("기록되지 않은 회차입니다.")
         return
