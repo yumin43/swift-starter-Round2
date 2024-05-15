@@ -8,6 +8,5 @@
 
 import Foundation
 
-let winningLottoNumbers = makeLottoNumbers()
-checkLottoNumbers(winning: winningLottoNumbers)
-
+addLottoNumbersByRound(for: 5)
+printLottoNumbers(of: 2, with: lottoNumbersByRound)
