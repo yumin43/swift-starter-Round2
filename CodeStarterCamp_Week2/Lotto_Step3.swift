@@ -9,17 +9,9 @@ import Foundation
 
 var lottoNumbersByRound = [String: Set<Int>]()
 
-func createLottoNumbers() -> Set<Int> {
-    var winningLottoNumbers = Set<Int>()
-    while winningLottoNumbers.count < 6 {
-        winningLottoNumbers.insert(Int.random(in: 1...45))
-    }
-    return winningLottoNumbers
-}
-
 func addLottoNumbersByRound(for round: Int) {
     for i in 1...round {
-        lottoNumbersByRound["\(i)회차"] = createLottoNumbers()
+        lottoNumbersByRound["\(i)회차"] = makeLottoNumbers()
     }
 }
 
