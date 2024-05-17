@@ -10,21 +10,21 @@ import Foundation
 
 
 func selectLottoNumbers() -> Set<Int> {
-    var lottoNums: Set<Int> = []
+    var lottoNumbers: Set<Int> = []
     
-    while lottoNums.count < 6 {
-        let randomNum = Int.random(in: 1...45)
-        lottoNums.insert(randomNum)
+    while lottoNumbers.count < 6 {
+        let randomNumber = Int.random(in: 1...45)
+        lottoNumbers.insert(randomNumber)
     }
     
-    return lottoNums
+    return lottoNumbers
 }
 
-func checkNumber(with myNums: Set<Int>, to lottoNums: Set<Int>) {
-    if myNums.intersection(lottoNums).count == 0 {
+func checkNumber(with myNumbers: Set<Int>, to lottoNumbers: Set<Int>) {
+    if myNumbers.intersection(lottoNumbers).count == 0 {
         print("아쉽지만 겹치는 번호가 없습니다.")
     } else {
-        let commonNumbers = myNums.intersection(lottoNums).map { String($0) }.joined(separator: ", ")
+        let commonNumbers = myNumbers.intersection(lottoNumbers).map { String($0) }.joined(separator: ", ")
         print("축하합니다! 겹치는 번호는 \(commonNumbers) 입니다!")
     }
 }
