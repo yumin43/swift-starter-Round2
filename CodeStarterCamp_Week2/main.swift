@@ -8,7 +8,7 @@
 
 import Foundation
 
-var lottoInfomation: Dictionary<String, Set<Int>> = [:]
+var lottoInfomation: Dictionary<Int, Set<Int>> = [:]
 
 func selectLottoNumbers() -> Set<Int> {
     var lottoNumbers: Set<Int> = []
@@ -20,12 +20,12 @@ func selectLottoNumbers() -> Set<Int> {
     return lottoNumbers
 }
 
-func addLottoInfomation(to round: Dictionary<String, Set<Int>>) {
-    lottoInfomation["\(round.count + 1)회차"] = selectLottoNumbers()
+func addLottoInfomation() {
+    lottoInfomation[lottoInfomation.count + 1] = selectLottoNumbers()
 }
 
-func printLottoInfomation(to round: Int, with lottoInfomation: Dictionary<String, Set<Int>>) {
-    if let lottoRound = lottoInfomation["\(round)회차"] {
+func printLottoInfomation(to round: Int, with lottoInfomation: Dictionary<Int, Set<Int>>) {
+    if let lottoRound = lottoInfomation[round] {
         let lottoNumbers = lottoRound.map { String($0) }.joined(separator: ", ")
         print("\(round)회차의 로또 당첨 번호는 \(lottoNumbers) 입니다")
     } else {
@@ -33,8 +33,11 @@ func printLottoInfomation(to round: Int, with lottoInfomation: Dictionary<String
     }
 }
 
-for _ in 0..<5 {
-    addLottoInfomation(to: lottoInfomation)
+func repeatLottoGeneration(with repeatNumbers: Int) {
+    for _ in 0..<repeatNumbers {
+        addLottoInfomation()
+    }
 }
 
+repeatLottoGeneration(with: 10)
 printLottoInfomation(to: 3, with: lottoInfomation)
