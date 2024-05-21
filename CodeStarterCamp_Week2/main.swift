@@ -8,28 +8,36 @@
 
 import Foundation
 
+var lottoInfomation: Dictionary<Int, Set<Int>> = [:]
 
 func selectLottoNumbers() -> Set<Int> {
     var lottoNumbers: Set<Int> = []
     
     while lottoNumbers.count < 6 {
-        let randomNumber = Int.random(in: 1...45)
-        lottoNumbers.insert(randomNumber)
+        lottoNumbers.insert(Int.random(in: 1...45))
     }
     
     return lottoNumbers
 }
 
-func checkNumber(with myNumbers: Set<Int>, to lottoNumbers: Set<Int>) {
-    if myNumbers.intersection(lottoNumbers).count == 0 {
-        print("아쉽지만 겹치는 번호가 없습니다.")
+func addLottoInfomation() {
+    lottoInfomation[lottoInfomation.count + 1] = selectLottoNumbers()
+}
+
+func printLottoInfomation(to round: Int, with lottoInfomation: Dictionary<Int, Set<Int>>) {
+    if let lottoRound = lottoInfomation[round] {
+        let lottoNumbers = lottoRound.map { String($0) }.joined(separator: ", ")
+        print("\(round)회차의 로또 당첨 번호는 \(lottoNumbers) 입니다")
     } else {
-        let commonNumbers = myNumbers.intersection(lottoNumbers).map { String($0) }.joined(separator: ", ")
-        print("축하합니다! 겹치는 번호는 \(commonNumbers) 입니다!")
+        print("해당 회차는 존재하지 않습니다")
     }
 }
 
-let myNumbers = selectLottoNumbers()
-let lottoNumbers = selectLottoNumbers()
+func repeatLottoGeneration(with repeatNumbers: Int) {
+    for _ in 0..<repeatNumbers {
+        addLottoInfomation()
+    }
+}
 
-checkNumber(with: myNumbers, to: lottoNumbers)
+repeatLottoGeneration(with: 10)
+printLottoInfomation(to: 3, with: lottoInfomation)
