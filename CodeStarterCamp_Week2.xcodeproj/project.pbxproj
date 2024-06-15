@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		34811DC2274B93D800A1E994 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34811DC1274B93D800A1E994 /* main.swift */; };
-		5243B9812C1494D600210291 /* LottoNumberFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243B9802C1494D600210291 /* LottoNumberFactory.swift */; };
+		5243B9812C1494D600210291 /* LottoNumbersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243B9802C1494D600210291 /* LottoNumbersFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,7 +26,7 @@
 /* Begin PBXFileReference section */
 		34811DBE274B93D800A1E994 /* CodeStarterCamp_Week2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CodeStarterCamp_Week2; sourceTree = BUILT_PRODUCTS_DIR; };
 		34811DC1274B93D800A1E994 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		5243B9802C1494D600210291 /* LottoNumberFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoNumberFactory.swift; sourceTree = "<group>"; };
+		5243B9802C1494D600210291 /* LottoNumbersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoNumbersFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +59,7 @@
 		34811DC0274B93D800A1E994 /* CodeStarterCamp_Week2 */ = {
 			isa = PBXGroup;
 			children = (
+				52D7A3702C1D774900B740C2 /* Step2 */,
 				5243B97F2C14947600210291 /* Step1 */,
 				34811DC1274B93D800A1E994 /* main.swift */,
 			);
@@ -68,9 +69,16 @@
 		5243B97F2C14947600210291 /* Step1 */ = {
 			isa = PBXGroup;
 			children = (
-				5243B9802C1494D600210291 /* LottoNumberFactory.swift */,
 			);
 			path = Step1;
+			sourceTree = "<group>";
+		};
+		52D7A3702C1D774900B740C2 /* Step2 */ = {
+			isa = PBXGroup;
+			children = (
+				5243B9802C1494D600210291 /* LottoNumbersFactory.swift */,
+			);
+			path = Step2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,7 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5243B9812C1494D600210291 /* LottoNumberFactory.swift in Sources */,
+				5243B9812C1494D600210291 /* LottoNumbersFactory.swift in Sources */,
 				34811DC2274B93D800A1E994 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
