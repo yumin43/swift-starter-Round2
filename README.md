@@ -19,4 +19,4 @@
         * "축하합니다! 겹치는 번호는 1, 2, 3, 4, 5, 6 입니다!"
     * 만약 겹치는 번호가 없다면 다음과 같은 문구를 print한다.
         * "아쉽지만 겹치는 번호가 없습니다."
-* [작업 파일](./CodeStarterCamp_Week2/Step1/LottoNumberFactory.swift)
+* [작업 파일](./CodeStarterCamp_Week2/Step2/LottoNumbersFactory.swift)
