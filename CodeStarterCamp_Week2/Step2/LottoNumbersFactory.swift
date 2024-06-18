@@ -34,19 +34,18 @@ func generateLottoNumbers() -> Set<Int> {
 }
 
 func checkMyLottoNumbers(_ myLottoNumbers: [Int]) {
-    
     if !isLottoNumbersValid(myLottoNumbers) {
         return
     }
     
     let lottoNumbers: Set<Int> = generateLottoNumbers()
-    let lottoNumbersIntersection: [Int] = lottoNumbers.intersection(myLottoNumbers).sorted()
+    let matchingLottoNumbers: [Int] = lottoNumbers.intersection(myLottoNumbers).sorted()
     
-    if lottoNumbersIntersection.count < 1 {
+    if matchingLottoNumbers.count < 1 {
         print("아쉽지만 겹치는 번호가 없습니다.")
         return
     }
     
-    let stringifiedLottoNumbersIntersection: String = lottoNumbersIntersection.map(String.init).joined(separator: ", ")
-    print("축하합니다! 겹치는 번호는 \(stringifiedLottoNumbersIntersection) 입니다!")
+    let lottoResult: String = matchingLottoNumbers.map(String.init).joined(separator: ", ")
+    print("축하합니다! 겹치는 번호는 \(lottoResult) 입니다!")
 }
