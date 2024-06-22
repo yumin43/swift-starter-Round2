@@ -8,5 +8,9 @@
 
 import Foundation
 
-let myLottoNumbers: [Int] = [1, 2, 3, 4, 5, 6]
-checkMyLottoNumbers(myLottoNumbers)
+/* Step2 */
+//let myLottoNumbers: [Int] = [1, 2, 3, 4, 5, 6]
+//checkMyLottoNumbers(myLottoNumbers)
+
+/* Step3 */
+findLottoHistory(at: 2)
