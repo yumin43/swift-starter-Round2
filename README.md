@@ -20,3 +20,17 @@
     * 만약 겹치는 번호가 없다면 다음과 같은 문구를 print한다.
         * "아쉽지만 겹치는 번호가 없습니다."
 * [작업 파일](./CodeStarterCamp_Week2/Step2/LottoNumbersFactory.swift)
+
+# Step3: 로또 당첨 번호를 회차별로 저장하고, 확인하자!
+* [x] 회차와 Lotto번호들을 저장하는 Dictionary 타입의 변수를 생성한다.
+    * [x] "1회차": [1, 2, 3, 4, 5, 6] 와 같은 Key와 Value를 가진다.
+* [x] Step 2의 로또 당첨 번호 생성 함수를 호출할 때마다, 회차와 로또 번호를 Dictionary에 저장하는 별도의 함수를 만든다.
+    * [x] 새로운 로또 당첨 번호를 생성하면, 직전 회차에 1을 더해 금번 회차를 만들어냅니다.
+    * [x] 회차를 Key로, 새로운 로또 당첨 번호를 Value로 하는 Dictionary 에 저장합니다.
+* [x] 로또 당첨 번호를 생성한 후 Dictionary에 저장된 로또 당첨 번호를 확인해봅니다.
+    * [x] 로또 당첨 번호를 5번 생성합니다.
+    * [x] Dictionary 에서 원하는 회차의 로또 당첨 번호를 찾습니다.
+        * [x] Optional 값을 안전하게 추출합니다.
+    * [x] Dictionary 에서 추출한 원하는 회차의 로또 당첨 번호 6개를 아래와 같이 출력합니다.
+        * [x] 2회차의 로또 당첨 번호는 1, 2, 3, 4, 5, 6 입니다.
+* [작업 파일](./CodeStarterCamp_Week2/Step3/LottoHistoryFactory.swift)
