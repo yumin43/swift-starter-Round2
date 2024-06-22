@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 let combineIndexWithLottoHistorySuffix = { (index: Int) -> String in
     let lottoHistorySuffix = "회차"
     return "\(index)\(lottoHistorySuffix)"
