@@ -13,4 +13,4 @@ import Foundation
 //checkMyLottoNumbers(myLottoNumbers)
 
 /* Step3 */
-findLottoHistory(round: 2)
+searchLotto(round: 2)

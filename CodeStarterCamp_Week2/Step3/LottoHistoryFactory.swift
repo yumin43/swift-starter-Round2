@@ -19,14 +19,14 @@ func generateLottoHistories() -> Dictionary<Int, [Int]> {
     return lottoHistories
 }
 
-func findLottoHistory(round: Int) {
+func searchLotto(round: Int) {
     let lottoHistories: Dictionary<Int, [Int]> = generateLottoHistories()
     
-    guard let selectedLottoHistory = lottoHistories[round] else {
+    guard let searchedLottoNumbers = lottoHistories[round] else {
         print("\(round)회차에는 로또 당첨 번호가 없어요")
         return
     }
     
-    let lottoHistoryResult: String = selectedLottoHistory.map(String.init).joined(separator: ", ")
-    print("\(round)회차의 로또 당첨 번호는 \(lottoHistoryResult) 입니다.")
+    let searchResult: String = searchedLottoNumbers.map(String.init).joined(separator: ", ")
+    print("\(round)회차의 로또 당첨 번호는 \(searchResult) 입니다.")
 }
