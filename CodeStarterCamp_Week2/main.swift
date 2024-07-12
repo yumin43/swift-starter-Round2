@@ -1,1 +1,1 @@
-randomNumberGeneratorOfLotto(myLottoNumbers: [2, 5, 15, 20, 31, 45])
+randomNumberGeneratorOfLottoNumber(myLottoNumbers: [2, 5, 15, 20, 31, 45])
