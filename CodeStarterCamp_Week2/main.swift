@@ -1,1 +1,1 @@
-randomNumberGeneratorOfLottoNumber()
+lottoNumberLotteryMachine()
