@@ -1,1 +1,1 @@
-lottoNumberLotteryMachine()
+drawLottoNumbers()

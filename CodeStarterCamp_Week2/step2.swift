@@ -1,13 +1,13 @@
 import Foundation
 
-var LottoNumber: Set<Int> = Set<Int>()
+var lottoNumbers: Set<Int> = Set<Int>()
 var winningNumber: [Int] = []
 var myLottoNumbers: [Int] = [1, 2, 3, 4, 5, 6]
 
-func generatorOfRandomNumbers() {
-    while LottoNumber.count < 6 {
+func generateOfRandomNumbers() {
+    while lottoNumbers.count < 6 {
         let randomNumber: Int = Int.random(in: 1 ... 45)
-        LottoNumber.insert(randomNumber)
+        lottoNumbers.insert(randomNumber)
     }
 }
 // 랜덤 번호를 생성하는 함수
@@ -27,14 +27,20 @@ func printWinningMesage() {
 }
 // 로또 당첨, 낙첨 결과를 프린트 하는 함수
 
-func lottoNumberLotteryMachine() {
-    LottoNumber.removeAll()
+func resetLottoResult() {
+    lottoNumbers.removeAll()
     winningNumber.removeAll()
-    generatorOfRandomNumbers()
+}
+// 로또 추첨 결과를 초기화 하는 함수
+
+func drawLottoNumbers() {
+    resetLottoResult()
     
-    for lottoNumbers in LottoNumber {
-        if myLottoNumbers.contains(lottoNumbers) {
-            winningNumber.append(lottoNumbers)
+    generateOfRandomNumbers()
+    
+    for lottoNumber in lottoNumbers {
+        if myLottoNumbers.contains(lottoNumber) {
+            winningNumber.append(lottoNumber)
         }
     }
     
